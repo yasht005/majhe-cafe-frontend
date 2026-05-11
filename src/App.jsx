@@ -10,11 +10,11 @@ import {
 
 /* COMPONENTS */
 
-import Navbar from './Components/Navbar'
+import Navbar from './components/Navbar'
 
-import Footer from './Components/Footer'
+import Footer from './components/Footer'
 
-import ProtectedAdminRoute from './Components/ProtectedAdminRoute'
+import ProtectedAdminRoute from './components/ProtectedAdminRoute'
 
 /* PAGES */
 
