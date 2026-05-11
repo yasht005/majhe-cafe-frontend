@@ -28,7 +28,7 @@ function Orders() {
     try {
 
       const res = await axios.get(
-        'http://localhost:5000/api/orders'
+       `${import.meta.env.VITE_API_URL}/api/orders`
       )
 
       setOrders(res.data)
@@ -87,8 +87,7 @@ function Orders() {
 
       await axios.put(
 
-        `http://localhost:5000/api/orders/${id}`,
-
+       `${import.meta.env.VITE_API_URL}/api/orders`,
         {
 
           status,

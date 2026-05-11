@@ -26,7 +26,7 @@ function Menu() {
 
   const fetchMenu = async () => {
     try {
-      const res = await axios.get("http://localhost:5000/api/menu");
+      const res = await axios.get(`${import.meta.env.VITE_API_URL}/api/menu`);
 
       setMenu(res.data);
     } catch (error) {
@@ -147,7 +147,7 @@ function Menu() {
       }
 
       const response = await axios.put(
-        `http://localhost:5000/api/menu/rate/${selectedItem._id}`,
+        `${import.meta.env.VITE_API_URL}/api/menu/rate/${selectedItem._id}`,
 
         {
           rating: Number(rating),

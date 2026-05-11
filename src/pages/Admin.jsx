@@ -40,7 +40,7 @@ function Admin() {
     try {
 
       const res = await axios.get(
-        'http://localhost:5000/api/menu'
+        `${import.meta.env.VITE_API_URL}/api/menu`
       )
 
       setMenuItems(res.data)
@@ -58,7 +58,7 @@ function Admin() {
     try {
 
       const res = await axios.get(
-        'http://localhost:5000/api/orders'
+        `${import.meta.env.VITE_API_URL}/api/orders`
       )
 
       setOrders(res.data)
@@ -107,7 +107,7 @@ function Admin() {
 
         await axios.put(
 
-          `http://localhost:5000/api/menu/${editingId}`,
+          `${import.meta.env.VITE_API_URL}/api/menu/${editingId}`,
 
           formData,
 
@@ -132,7 +132,7 @@ function Admin() {
 
         await axios.post(
 
-          'http://localhost:5000/api/menu',
+          `${import.meta.env.VITE_API_URL}/api/menu`,
 
           formData,
 
@@ -176,7 +176,7 @@ function Admin() {
     try {
 
       await axios.delete(
-        `http://localhost:5000/api/menu/${id}`
+        `${import.meta.env.VITE_API_URL}/api/menu/${id}`
       )
 
       alert('Menu Item Deleted')

@@ -7,7 +7,7 @@ import { motion } from 'framer-motion'
 import { io } from 'socket.io-client'
 
 const socket = io(
-  'http://localhost:5000'
+  import.meta.env.VITE_API_URL
 )
 
 function MyOrders() {
@@ -20,7 +20,7 @@ function MyOrders() {
     try {
 
       const res = await axios.get(
-        'http://localhost:5000/api/orders'
+        `${import.meta.env.VITE_API_URL}/api/orders`
       )
 
       setOrders(res.data.reverse())
